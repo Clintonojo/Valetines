@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 class="valentines-header">Happy Valentines <span class="heart">♥</span> Julia</h1>```
+ 
+  <div id="valentine-container" class="valentine-container">
+    <img id="kitty-img" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHZ4bWh6azMwcHRtdGwycGMyeDB0bGRhdHhscjhoOGl5MW03Z2hxZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QAn6JoVuABBEapYyX2/giphy.gif" alt="kitty cat">
+    <div id="question-text">Jules - Will you be my valentine?</div>
+    <div id="buttons-container">
+      <button id="yes-button" class="yes-button" onclick="showLove()">YES</button>
+      <button id="no-button" class="no-button" onclick="handleNoClick()">NO</button>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const phrases = [
+      "no",
+      "are you sure Jules ??",
+      "maybe think again I'm the best for you...",
+      "pleaseeeeeeeeeeee?",
+      "c'mon bae be for real, you love me",
+      "you're being silly, very silly",
+      "reconsider my tizzy queen?",
+      "ugh still no c'monnn???",
+      "is that your final answer pookie?",
+    ];
+
+    let noCount = 0;
+
+    function handleNoClick() {
+      noCount++;
+      document.getElementById('no-button').innerText = phrases[Math.min(noCount, phrases.length - 1)];
+    }
+
+    function updateYesButton() {
+  yesCount++;
+  document.getElementById('yes-button').innerText = `YES (${yesCount})`;
+}
+
+    function showLove() {
+      document.getElementById('valentine-container').innerHTML = `
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGdqZTR1MzNwZDZuMDl5aGFmam4zeXhteWZnbGp0eDd5bHNnZHMxZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5dUllWbKVlaqmMTvHb/giphy.gif" alt="kitty cat">
+        <div class="text">YAYYY I love you see u Thursday afternoon!</div>
+      `;
+    }
+   
+
+    function showLove() {
+      // Play music
+      var audio = new Audio("Jules.mp3"); // change this to voice note of me saying silly shit
+      audio.play();
+
+      // Display slideshow of images
+      var images = [
+        "Julia1.jpg",
+        "Julia2.jpg",
+        "Julia3.jpg",
+        "Julia4.jpg",
+        "Julia5.PNG",
+        "Julia6.jpg",
+        "Julia7.jpg",
+        "Julia8.jpg",
+        "Julia9.jpg",
+        "Julia10.jpg",
+        "Julia11.jpg",
+        
+        // Add more images as needed
+      ];
+      var currentImageIndex = 0;
+      var imageElement = document.getElementById('kitty-img');
+      setInterval(function() {
+        imageElement.src = images[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+      }, 3000);
+    }
+
+  </script>
+</body>
+</html>

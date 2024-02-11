@@ -1,0 +1,53 @@
+.valentine-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #kitty-img {
+    width: 300px;
+  }
+  
+  #buttons-container {
+    margin-top: 20px;
+  }
+  
+  .yes-button, .no-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .yes-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  .no-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  .valentines-header {
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    padding-top: 100px;
+  }
+
+  .valentines-header {
+      color: #f10d0d; /* this sets the default text color to a dark gray */
+  }
+  
+  .valentines-header .heart {
+      color: red; /* this sets the heart color to red */
+      font-size: 36px; /* this sets the heart size */
+  }
+body {
+    background-image: url("Valetineimg.jpg");
+}
+
+  
